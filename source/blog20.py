@@ -48,6 +48,14 @@ def configure(conf):
 		failed = True
 
 	try:
+		conf.start_msg("Checking for GitPython")
+		import git
+		conf.end_msg("OK")
+	except ImportError as e:
+		conf.end_msg(e, color = 'RED')
+		failed = True
+
+	try:
 		conf.start_msg("Checking for pyyaml")
 		import yaml
 		conf.end_msg("OK")
