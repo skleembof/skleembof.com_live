@@ -64,7 +64,8 @@ def configure(conf):
 		failed = True
 
 	if failed:
-		raise Errors.ConfigurationError('Missing required Python modules')
+		install_command = "python3 -m pip install pygments markdown rfeed GitPython pyyaml"
+		raise Errors.ConfigurationError('Missing required Python modules. Install them with:\n\t\"%s\"' % install_command)
 
 def parse_datestr(instr):
 	if '/' in instr:
