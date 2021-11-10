@@ -357,8 +357,8 @@ class BuildMdContent(Task.Task):
 			original_node = self.generator.bld.root.find_node(original)
 			new_node = self.generator.bld.root.find_node(new)
 
-			original_rel = original_node.path_from(self.generator.path)
-			new_rel = new_node.get_src().path_from(self.generator.path)
+			original_rel = original_node.path_from(self.generator.path).replace('\\', '/')
+			new_rel = new_node.get_src().path_from(self.generator.path).replace('\\', '/')
 
 			src = re.sub(
 				"!\\[(.*)\\]\\(%s\\)" % original_rel,
