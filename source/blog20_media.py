@@ -87,7 +87,10 @@ def process_convert_image(self):
 		if file.suffix() in IMAGE_FORMATS and self.env.DISABLE_IMG_CONVERSION != True:
 			outnode = file.change_ext('.%s' % self.env.IMAGE_FMT_OUT)
 			tsk = self.create_task('ConvertImage', [file], [outnode])
-			tsk.do_shrink = getattr(self, 'shrink_images', True)
+			if getattr(file, 'dont_shrink', False) == True:
+				tsk.do_shrink = False
+			else:
+				tsk.do_shrink = getattr(self, 'shrink_images', True)
 			files[i] = outnode
 			self.env.img_replacement_map[file.abspath()] = outnode.abspath()
 		elif file.suffix() == ".gif" and self.env.DISABLE_GIF_OPTIMIZATION != True: #use gifsicle!

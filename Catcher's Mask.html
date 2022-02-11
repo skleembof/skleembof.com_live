@@ -1,0 +1,89 @@
+<?xml version="1.0" ?><!DOCTYPE HTML><html>
+	<head>
+		<title>Catcher's Mask</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!--[if lte IE 8]><script src="/source/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/source/css/main.css"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="/source/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/source/css/ie8.css" /><![endif]-->
+	<meta property="og:title" content="Catcher's Mask"/><meta property="og:description" content="Force3 Pro Catcher's Mask"/><meta property="og:url" content="https://skleembof.com/Catcher's Mask.html"/></head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<!--
+									<span class="symbol"><img src="/source/images/logo.svg" alt="" /></span>
+									-->
+									<span class="title">Leonardo Ramallo</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul id="NavMenu"><li><a class="menu-item" href="/">Projects</a></li><li><a class="menu-item" href="/blog">Blog</a></li><li><a class="menu-item" href="/About">About</a></li></ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<article id="MainContent"><span><h1>Catcher's Mask</h1>
+<p class="article-date">Monday, November 08, 2021 - 12:00 AM</p>
+
+<p><span class="main"><model-viewer bounds="tight" ar="1" ar-modes="webxr scene-viewer quick-look" camera-controls="1" shadow-intensity="1" auto-rotate="1" src="projects/Mask/mask.glb"><div class="progress-bar hide" slot="progress-bar"><div class="update-bar"/></div></model-viewer></span></p>
+<p>This mask is part of a series of baseball assets that I'm working on for a future baseball videogame I plan on developing. The mask is based on the Force3 Pro catchers mask which is designed to deaden the impact of high velocity pitches to prevent concussions by using a unique spring based suspension system. </p>
+<p><center>
+    <img src="projects/Mask/banner.ds.webp" width="100%"/>
+</center></p>
+<p><center>
+    <img src="projects/Mask/Uvlayout.ds.webp" style="max-height: 50vh"/>
+</center></p>
+<p>I made this mask completely in blender using splines to create the cage geometry, and the shader editor to create procedural materials which I then baked into 4 textures at 512x512 to keep the whole thing at a web friendly 330KB.</p>
+<p>The current model has 4,268 triangles and a single material with baked diffuse, metallic, roughness, and normal, plus one additional material with a single alpha texture for the springs. I made each texture an atlas so that I could get away with using only 4 textures for the entire model. There are still a lot of design decisions to make for the game itself which would affect how I would go about optimizing these assets but I do know that I want to include a replay system with a free-fly camera which means the player will be able to get a close up view of this mask and other assets. For this reason, I opted to fully model the wire cage even though an alpha texture over simplified geometry would have been sufficient since the main view of the game is a fixed camera with a narrow FOV, far away from the asset itself.</p>
+<p>Moving forward, I will likely make significant changes to the asset once I decide what platforms I'm going to target. I'll redo the textures, create LODs, include the spring material in the single texture atlas for one less draw call. </p></span></article>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/skleembof" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="mailto:skleembof@pm.me" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<div id="CopyrightString" class="copyright">
+								
+							<p class="copyright">© Leonardo Ramallo 2022</p></div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/source/js/jquery.min.js">;</script>
+			<script src="/source/js/skel.min.js">;</script>
+			<script src="/source/js/util.js">;</script>
+			<!--[if lte IE 8]><script src="/source/js/ie/respond.min.js">;</script><![endif]-->
+			<script src="/source/js/main.js">;</script>
+			<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">;</script>
+	</body>
+</html>
