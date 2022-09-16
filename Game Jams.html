@@ -1,0 +1,144 @@
+<?xml version="1.0" ?><!DOCTYPE HTML><html>
+	<head>
+		<title>Game Jams</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!--[if lte IE 8]><script src="/source/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/source/css/main.css"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="/source/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/source/css/ie8.css" /><![endif]-->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+	<meta property="og:title" content="Compound Light Microscope"/><meta property="og:description" content="Compound Light Microscope"/><meta property="og:url" content="https://skleembof.com/Game Jams.html"/></head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<!--
+									<span class="symbol"><img src="/source/images/logo.svg" alt="" /></span>
+									-->
+									<span class="title">Leonardo Ramallo</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul id="NavMenu"><li><a class="menu-item" href="/">Projects</a></li><li><a class="menu-item" href="/blog">Blog</a></li><li><a class="menu-item" href="/About">About</a></li></ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<article id="MainContent"><span><h1>Game Jams</h1>
+<p class="article-date">Wednesday, April 20, 2022 - 12:00 AM</p>
+
+<h1><a href="https://skleembof.itch.io/primate-escape">&quot;Primate Escape&quot;</a></h1>
+<p><center>
+    <iframe src="https://player.vimeo.com/video/662042403?h=fde94bc155" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="1"> 
+    </iframe>
+    <p><em><strong>32bit Holiday Jam 2021</strong></em></p>
+</center></p>
+<p><strong>My Best Jam Game</strong></p>
+<ul>
+<li><strong>Team Size: 1</strong></li>
+<li><strong>Engine: Unity</strong></li>
+<li><strong>Role: Artist + Programmer</strong></li>
+</ul>
+<p>Primate Escape is probably the best jam game I've ever made and it's also the only one that was made in more than 72 hours. This jam was about 2 weeks long but it took place at the end of December so I didn't have a lot of free time to work on it but I did dedicate about a week to it. Still though, you'd think a week would be enough time to come up with a better title. </p>
+<p>The theme of the jam was PS1 style graphics which made it easy to quickly create assets since I didn't have to worry about PBR. I tried to create a world that looked and felt like the original Ape Escape. I made all the assets from scratch including the animations. The only assets I didn't make were the animations for the dancing gorillas at the end which I got from mixamo.</p>
+<p>The most complex feature was the monkey AI which got pretty out of hand towards the end of development. The monkeys can transition between idle, alert, and flee states which determines wheter they run away or attack the player. The monkeys are capable of climbing trees and even jumping between trees in an effort to escape the player. </p>
+<p>The player can use a slingshot to shoot monkeys out of trees and stun them temporarily, and a helicopter toy to gain jumping height and glide a short distance. I wrote the character controller with my own physics which led to some sloppy collision detection.</p>
+<p>Running around the world listening to the killer Kevin &quot;The GOAT&quot; MacLeod soundtrack while catching monkeys is actually pretty fun for a few minutes. </p>
+<p>And yes, the voiced sound effects are me (including the monkey &quot;OOH&quot;s)</p>
+<h1><a href="https://skleembof.itch.io/hymenoptera">&quot;Hymenoptera King&quot;</a></h1>
+<p><center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lesOmZZ8YEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"> </iframe>
+    <p><em><strong>Ludum Dare 50</strong></em></p>
+</center></p>
+<p><strong>My Latest Jam Game</strong></p>
+<ul>
+<li><strong>Team Size: 1</strong></li>
+<li><strong>Engine: Unity</strong></li>
+<li><strong>Role: Artist + Programmer</strong></li>
+</ul>
+<p>For LD50 I wanted to make a game with unique gameplay that controlled well. A quality character controller was my goal after the spaghetti ai logic for the Primate Escape monkeys inspired me to learn more about programming patterns. I chose PS1 style graphics again to save time because I knew this game would end up being very complicated.</p>
+<p>The character controller is a finite state machine with unique behaviors for each state like walking, falling, flying, etc. which made the controls feel tight and responsive. I used an FSM for the hornet logic as well which gave me a lot of flexibility on how to handle their gameplay behavior.</p>
+<p>Unfortunately when time inevitably forced me to cut some features, I ended up with a weird jumble of systems that no longer made sense. The original idea had ant npcs running into the huts and getting killed by the hornets who would also attack the player. You would have to sneak up behind a hornet and take control of it to battle the other hornets with goal of surviving as long as possible. After the first day it became clear that I woudln't have time to make the NPCs which left me with an empty arena swarmed by hornets that had nothing to do except kill the player. Instead of redesigning the arena to give the player places to hide, I came with a very weird solution to this problem. </p>
+<p>The hornets swarm the field, but don't attack the player. After some time, a hornet on the field will rest on the ground for a few seconds. When a hornet lands it adds weight, too much of which will result in a game over. The player has to use the riding mechanic to mount and kill hornets and dispose of their corpses to prevent the weight limit from being reached. During all of this there is a giant spider moving towards the arena which can also cause a game over. So the player has to always keep the spider in check while they're clearing out hornets. At any time the player can fly a hornet up to the spider and hit it to reset its position.</p>
+<p>I might be biased, but I actually find the gameplay to be pretty fun. Unfortunately the most common reaction I got during Ludum Dare was total confusion. The gameplay is very abstract and I didn't communicate the rules effectively. I quickly slapped together a tutorial video but I don't think it helped much.</p>
+<h1><a href="https://ldjam.com/events/ludum-dare/45/remember-dismember">&quot;Dismembered Teef&quot;</a></h1>
+<p><center>
+    <br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Vd_2w2DcZm0" title="YouTube video player" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="1"> </iframe>
+    <p> <em><strong>Ludum Dare 45</strong></em> </p>
+</center></p>
+<p><strong>My First Jam Game</strong></p>
+<ul>
+<li><strong>Team Size: 2</strong></li>
+<li><strong>Engine: Amazon Lumberyard</strong></li>
+<li><strong>Role: Artist</strong></li>
+</ul>
+<p>Ludum Dare 45 was my first game jam ever and it took place in October 2019. I made &quot;Dismembered Teef&quot; with my brother using Amazon Lumberyard. The game was a simple platformer where you start off as a chattering teeth wind-up toy and collect body parts to eventually allow you to escape the area. </p>
+<p>Unfortunately, we ran out of time while trying to generate a final build of the game which took hours and failed multiple times (thanks Lumberyard!) so we had to settle on releasing a youtube video.</p>
+<p>I didn't do any programming, but I made all of the art. I used Blender to make everything except for the textures. I used <strong><a href="https://boundingboxsoftware.com/materialize/">Materialize</a></strong> to create all the textures by taking photographs of various materials in my backyard and turning them into PBR maps.</p>
+<h1>The Rest...</h1>
+<p>I've participated in 9 game jams since 2019. </p>
+<h3>THE GOOD</h3>
+<p><strong><a href="https://ldjam.com/events/ludum-dare/47/caterpillar-dissent-deliverance">Caterpillar Dissent: Deliverance</a></strong> has an awesome title and had a great initial concept. I wasn't able to realize it because my brother dropped out at the very end without contributing anything, making this the first game I worked on alone. The jam theme was &quot;Loop&quot; so I came up with the idea of a Katamari Damacy style game where you play as a caterpillar stuck in a loop, unable to become a butterfly. You would eat various props growing in size until a timer expires at which point you enter a chrysalis and your size is measured. If you don't reach the score threshold, you &quot;loop&quot; back into a caterpillar and go back to eating until you get big enough to break the cycle. I programmed all of the logic in the last 3 hours of the jam. I had to cut out a lot of assets I made and totally compromise on the design, but the final product was kind of hilarious and it gave me the confidence to make my own games from that point on.</p>
+<h3>THE BAD</h3>
+<p><strong><a href="https://skleembof.itch.io/limit-less">Limit -Less</a></strong> is easily the worst game I've ever made. It has almost no redeeming qualities and felt like a complete and utter failure. It is broken, ugly, boring, and unimpressive. This happened because I wanted to create a Devil May Cry style game to practice animation but I had to make the character and the rig during the 48 hour jam. I realized I was going to be very short on time so I only made half of the rig and used Blenders auto IK to animate the arms, which led to a much slower animation workflow. 80% of my time was spent creating animations of which I ended up using only about 60% of them. I didn't have time to design a map, or create enemy AI, or any sort of gameplay elements. I slapped together a bad combo system that didn't make good use of the animations and had collision detection issues attacking the completely stationary enemies. I then tried to add a grappling hook to interact with the environment but it did nothing but add to the jankiness of the experience.</p>
+<h3>THE UGLY</h3>
+<p><strong><a href="https://ldjam.com/events/ludum-dare/46/global-warning-the-smogocalypse">&quot;Global Warning: The Smogocalypse&quot;</a></strong> is one of the worst games I've made, and a complete waste of an amazing title. This is the second game I made with my brother, and it ended up an overambitious unfinished mess. The idea was the earth was dying because of all the smog, and you played as a Smog-Bot that flew around in a space ship traveling to factories and destroying them from the inside. We couldn't decide on the final mechanics, and because of time, started working independently of each other. Levels were designed before the character controller was finished so most of the game is almost unplayable or just boring. To make matters worse, I wanted to try out substance painter for the first time but because of these issues I ended up texturing the character in about 10 minutes using a program I had no experience with so it came out...not good.</p>
+<h3>THE WEIRD</h3>
+<p><strong><a href="https://ldjam.com/events/ludum-dare/48/mocap-mo-problems">Mocap, Mo' Problems</a></strong> This is a game I made for Ludum Dare 48 using full motion capture animations. I set up 6 PS3 Eye cameras in my living room and used IPISoft mocap software to capture and create the animations. As you can imagine, motion capture takes a long time to set up, calibrate, record, clean-up, and produce usable animations. I was shooting for the 48 hour competition deadline but ended up releasing it for the 72 hour jam instead since it was nowhere near finished. In the final game you play as an odd looking person in a strange world, running around being chased by naked dudes (because of course I had no time to give them clothes). This wasn't my first time doing mocap with IPISoft, so I already had experience with calibrating the cameras and using the software, but this was my first time using them for a game.</p>
+<h3>THE SPOOKY</h3>
+<p><strong><a href="https://ldjam.com/events/ludum-dare/49/grim-tripper">Grim Tripper</a></strong> is a game where you play as the grim reaper and fly around ripping the souls out of people and killing demons. It's nowhere near as exciting as that description however. This is another halloween Ludum Dare game where I wasn't able to realize the original design during the jam. There is no win or lose state, but it's kind of fun flying around as the reaper and engaging in the Luigi's Mansion inspired soul ripping mini game. I think I did a good job with the character controller, making it feel like you're controlling a ghost.</p>
+<h3>THE COMPLICATED</h3>
+<p><strong><a href="https://skleembof.itch.io/save-the-villagers">Save The Villagers</a></strong> is another 48 hour jam game I made with my brother. The lukewarm title is a nod to the first game he ever made with GameMaker Studio in like 2006. The game takes place on an island undergoing an apocalyptic calamity. The calamity takes place in stages, a meteor shower, a swarm of spiders, flooding, and finally an encounter with a giant demon. Your goal is to try and keep as many villagers alive until the final stage and then jump through a time portal that takes you and the villagers back to the beginning. The time traveled villagers will be more experienced and able to survive the calamity without your help, and they can save other villagers as well. The goal is to eventually reach the end with enough villagers to defeat the demon. In 48 hours, we managed to create the first 2 stages and the time traveling, but not enough to make it feel like an actual game.</p></span></article>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/skleembof" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="mailto:skleembof@pm.me" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<div id="CopyrightString" class="copyright">
+								
+							<p class="copyright">© Leonardo Ramallo 2022</p></div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/source/js/jquery.min.js">;</script>
+			<script src="/source/js/skel.min.js">;</script>
+			<script src="/source/js/util.js">;</script>
+			<!--[if lte IE 8]><script src="/source/js/ie/respond.min.js">;</script><![endif]-->
+			<script src="/source/js/main.js">;</script>
+			<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">;</script>
+	</body>
+</html>

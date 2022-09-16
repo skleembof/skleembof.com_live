@@ -1,0 +1,104 @@
+<?xml version="1.0" ?><!DOCTYPE HTML><html>
+	<head>
+		<title>Microscope</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!--[if lte IE 8]><script src="/source/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/source/css/main.css"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="/source/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/source/css/ie8.css" /><![endif]-->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+	<meta property="og:title" content="Compound Light Microscope"/><meta property="og:description" content="Compound Light Microscope"/><meta property="og:url" content="https://skleembof.com/Microscope.html"/></head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<!--
+									<span class="symbol"><img src="/source/images/logo.svg" alt="" /></span>
+									-->
+									<span class="title">Leonardo Ramallo</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul id="NavMenu"><li><a class="menu-item" href="/">Projects</a></li><li><a class="menu-item" href="/blog">Blog</a></li><li><a class="menu-item" href="/About">About</a></li></ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<article id="MainContent"><span><h1>Microscope</h1>
+<p class="article-date">Friday, May 20, 2022 - 12:00 AM</p>
+
+<p><span class="main"><model-viewer bounds="tight" ar="1" ar-modes="webxr scene-viewer quick-look" camera-controls="True" shadow-intensity="1" auto-rotate="1" id="microscope" loading="eager" min-field-of-view="1deg" exposure="1" enable-pan="True" autoplay="True" src="/projects/Microscope/microscope_Web.glb"><div class="progress-bar hide" slot="progress-bar"><div class="update-bar"/></div></model-viewer></span></p>
+<h2><strong>Background</strong></h2>
+<p>I made this to try out the popular UVPackmaster 3 add-on for Blender with a complex hard-surface model. I wanted to see how quickly I could unwrap and bake using this add-on.</p>
+<p>The add-on made it possible for me to make quick modifications to my already UV mapped model without having to worry about messing up existing islands, texel density, or wasting time manually organizing islands 
+(because the built-in packer in Blender sucks). </p>
+<h3>Software used</h3>
+<ul>
+<li>Blender</li>
+<li>Gimp</li>
+</ul>
+<div>
+    <img src="projects/Microscope/benchRender.webp" style="width: 100%;padding:30px,30px,30px,30px"/>
+</div>
+
+<h3>Process</h3>
+<p>I used the actual microscope (which I bought in college) as a reference to create the high poly model. Then I created the low poly and uv mapped it by manually creating seams, unwrapping and scaling islands for the most prominent parts of the mesh, and auto unwrapping the rest. I used the add-on to specify island groups that I wished to maintain scale in order to maximize texel density where I planned on adding text. </p>
+<p><center>
+    <img src="projects/Microscope/textures.webp"/>
+</center></p>
+<h3>Optimizations</h3>
+<p>My only optimization goal for this project was to keep the poly count low and to only use a single material. </p>
+<p>The final asset has 7,669 verts (4834 merged) or 9,051 triangles after exporting to GLTF format with a single material that has diffuse, normal map, and a single metallic/roughness channel packed texture.</p>
+<p>This type of prop wouldn't get very close to the camera in most games except maybe in VR, so as a simple background prop, I could probably ditch the normal map altogether and significantly lower vertex count. The lighting components under the bed could be simplified since the player likely won't get close enough to notice. I would also redo the UV map, significantly reducing the number of islands.</p></span></article>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/skleembof" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="mailto:skleembof@pm.me" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<div id="CopyrightString" class="copyright">
+								
+							<p class="copyright">© Leonardo Ramallo 2022</p></div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/source/js/jquery.min.js">;</script>
+			<script src="/source/js/skel.min.js">;</script>
+			<script src="/source/js/util.js">;</script>
+			<!--[if lte IE 8]><script src="/source/js/ie/respond.min.js">;</script><![endif]-->
+			<script src="/source/js/main.js">;</script>
+			<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">;</script>
+	</body>
+</html>
